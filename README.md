@@ -12,6 +12,20 @@
   Pedestrian Crossing • Emergency Vehicle Priority • GTKWave Verification • Streamlit Dashboard
 </p>
 
+<p align="center">
+  <a href="https://fpga-smart-traffic-light-controller-74fyvkmvcljtrogolskfap.streamlit.app/">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit-red?style=for-the-badge">
+  </a>
+</p>
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Live Dashboard**
+
+https://fpga-smart-traffic-light-controller-74fyvkmvcljtrogolskfap.streamlit.app/
+
 ---
 
 ## 📌 Overview
