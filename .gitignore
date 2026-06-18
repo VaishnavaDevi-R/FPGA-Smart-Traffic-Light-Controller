@@ -1,0 +1,97 @@
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual Environment
+
+venv/
+.venv/
+env/
+
+# Streamlit
+
+.streamlit/secrets.toml
+
+# Verilog Compilation Outputs
+
+*.out
+*.vvp
+
+# Waveform Files (optional)
+
+# Uncomment if you don't want large waveform files in GitHub
+
+# *.vcd
+
+# GTKWave Save Files
+
+*.gtkw
+*.sav
+
+# FPGA Tool Outputs
+
+*.jou
+*.log
+*.str
+*.tmp
+*.cache
+*.hw
+*.runs/
+*.sim/
+*.Xil/
+
+# Quartus Outputs
+
+db/
+incremental_db/
+output_files/
+
+# Vivado Outputs
+
+.vivado/
+.cache/
+.ip_user_files/
+
+# VS Code
+
+.vscode/
+
+# JetBrains
+
+.idea/
+
+# OS Files
+
+.DS_Store
+Thumbs.db
+
+# Dashboard
+
+dashboard/.streamlit/
+
+# Generated Reports
+
+*.aux
+*.toc
+*.lof
+*.lot
+
+# Temporary Files
+
+*.bak
+*.swp
+*.temp
+
+# Build Directories
+
+build/
+dist/
+
+# Python Packaging
+
+*.egg-info/
+*.egg

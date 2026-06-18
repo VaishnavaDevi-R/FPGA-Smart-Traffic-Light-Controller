@@ -1,0 +1,193 @@
+# FPGA Smart Traffic Light Controller with Pedestrian Crossing and Emergency Vehicle Priority
+
+## Abstract
+
+This project presents a Smart Traffic Light Controller implemented using SystemVerilog and Finite State Machine (FSM) architecture. The controller manages traffic flow between North-South and East-West directions while incorporating pedestrian crossing functionality and emergency vehicle prioritization. The design was verified using Icarus Verilog and GTKWave to ensure correct state transitions and safe traffic signal operation.
+
+---
+
+## Objectives
+
+* Design a finite state machine based traffic controller.
+* Implement timer-based traffic signal sequencing.
+* Support pedestrian crossing requests.
+* Provide emergency vehicle priority handling.
+* Verify functionality through simulation and waveform analysis.
+
+---
+
+## Tools and Technologies
+
+* SystemVerilog
+* Icarus Verilog
+* GTKWave
+* Streamlit Dashboard
+* Visual Studio Code
+
+---
+
+## System Architecture
+
+### Inputs
+
+* Clock (clk)
+* Reset (rst)
+* Pedestrian Button (ped_button)
+* Emergency Signal (emergency)
+
+### Outputs
+
+* NS_G
+* NS_Y
+* NS_R
+* EW_G
+* EW_Y
+* EW_R
+
+---
+
+## FSM States
+
+1. NS_GREEN
+2. NS_YELLOW
+3. ALL_RED_1
+4. PED_WALK
+5. EW_GREEN
+6. EW_YELLOW
+7. ALL_RED_2
+8. EMERGENCY_GREEN
+
+---
+
+## State Transition Flow
+
+NS_GREEN
+
+↓
+
+NS_YELLOW
+
+↓
+
+ALL_RED_1
+
+↓
+
+PED_WALK
+
+↓
+
+EW_GREEN
+
+↓
+
+EW_YELLOW
+
+↓
+
+ALL_RED_2
+
+↓
+
+NS_GREEN
+
+Emergency Override:
+
+ANY_STATE
+
+↓
+
+EMERGENCY_GREEN
+
+↓
+
+NS_GREEN
+
+---
+
+## Pedestrian Crossing Module
+
+The pedestrian module allows users to request safe crossing. Upon activation, the controller transitions through an ALL_RED safety state before entering the pedestrian walk phase.
+
+---
+
+## Emergency Vehicle Priority
+
+The emergency override mechanism immediately grants traffic priority by transitioning the controller to EMERGENCY_GREEN mode. Normal operation resumes once the emergency condition is cleared.
+
+---
+
+## Simulation Results
+
+The design was simulated using Icarus Verilog.
+
+Verified Features:
+
+* Reset Operation
+* Traffic State Sequencing
+* Pedestrian Crossing
+* Emergency Vehicle Priority
+* Safe State Recovery
+
+All test cases passed successfully.
+
+---
+
+## Waveform Verification
+
+Waveforms were analyzed using GTKWave.
+
+Verified Signals:
+
+* clk
+* rst
+* current_state
+* next_state
+* timer_count
+* ped_button
+* emergency
+* NS_G
+* NS_Y
+* NS_R
+* EW_G
+* EW_Y
+* EW_R
+
+---
+
+## Dashboard
+
+A Streamlit-based dashboard was developed to visualize:
+
+* Current Traffic State
+* Traffic Signal Status
+* Pedestrian Requests
+* Emergency Events
+* Traffic Analytics
+* Verification Status
+
+---
+
+## Applications
+
+* Smart Cities
+* Intelligent Transportation Systems
+* Urban Traffic Management
+* Emergency Response Networks
+* FPGA-Based Control Systems
+
+---
+
+## Future Enhancements
+
+* Vehicle Density Detection
+* IoT-Based Traffic Monitoring
+* Adaptive Signal Timing
+* Multi-Junction Coordination
+* FPGA Hardware Deployment
+
+---
+
+## Conclusion
+
+The FPGA Smart Traffic Light Controller successfully demonstrates traffic sequencing, pedestrian crossing management, and emergency vehicle prioritization using a robust FSM architecture. The project highlights digital design, verification, and simulation skills applicable to FPGA and VLSI development.
